@@ -1,0 +1,53 @@
+@use 'src/theme';
+
+.xp-confirm {
+  text-align: center;
+  min-width: 240px;
+  max-width: 270px;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.xp-confirm-content {
+  word-wrap: break-word;
+  word-break: break-word;
+  padding: 35px 15.5px 32px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+  position: static;
+  transform: translate(0, 0);
+}
+.xp-confirm-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-top: 1px solid #ccc;
+  font-size: 0;
+}
+.xp-confirm-ft-item {
+  width: 50%;
+  height: 43px;
+  font-size: 17px;
+  line-height: 43px;
+  cursor: pointer;
+  border: none;
+  color: #666;
+  background: #fff;
+  letter-spacing: -0.4px;
+  display: inline-block;
+}
+.xp-confirm-ft-item:last-child {
+  border-right: none;
+  border-left: 1px solid #ccc;
+  margin: 0 0 0 -1px;
+  color: theme.$primary;
+}
+.xp-confirm-one {
+  width: 100%;
+}

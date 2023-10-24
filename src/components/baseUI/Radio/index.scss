@@ -1,0 +1,30 @@
+@use 'src/theme';
+
+.radio-container {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 16px 0 0;
+  .checked {
+    color: theme.$primary;
+    fill: theme.$primary;
+  }
+  .not-checked {
+    fill: #666;
+  }
+  .radio-box {
+    width: 20px;
+    height: 20px;
+    padding: 0 8px 0 0;
+    vertical-align: bottom;
+  }
+  &:hover .radio-box {
+    color: theme.$primary-dark;
+  }
+}
+.radio-group-container {
+  display: inline-block;
+}
+.disable {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

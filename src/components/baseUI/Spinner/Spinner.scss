@@ -1,0 +1,73 @@
+@use 'src/theme';
+
+$block: 'spinner';
+
+.#{$block} {
+  width: 1em;
+  height: 1em;
+  stroke: theme.$primary;
+  &--small {
+    font-size: 0.875rem;
+    .#{$block}__circle {
+      stroke-width: 5;
+    }
+  }
+  &--medium {
+    font-size: 2.5rem;
+    .#{$block}__circle {
+      stroke-width: 4;
+    }
+  }
+  &--large {
+    font-size: 4rem;
+    .#{$block}__circle {
+      stroke-width: 3;
+    }
+  }
+}
+
+.#{$block}--animate {
+  .#{$block}__wrapper {
+    animation-name: #{$block}__spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .#{$block}__circle {
+    animation-name: #{$block}__stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+}
+
+.#{$block}__circle {
+  stroke-linecap: round;
+  fill: none;
+}
+
+
+@keyframes #{$block}__spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes #{$block}__stretch {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}

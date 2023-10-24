@@ -1,0 +1,18 @@
+@use 'theme';
+
+.ani-demo-div {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+.ani-demo-div2 {
+  margin-top: 60px;
+}
+.btn-demo {
+  padding:  0 10px;
+  height:30px;
+  line-height: 30px;
+  background-color: theme.$primary;
+  border-radius: 15px;
+  user-select: none;
+}

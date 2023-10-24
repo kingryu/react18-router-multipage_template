@@ -1,0 +1,13 @@
+.load-more {
+  .bot-more {
+    line-height: 20px;
+    font-size: 12px;
+    color: #b4b9bf;
+    text-align: center;
+    &.nomore {
+    }
+    &.loadmore {
+      
+    }
+  }
+}

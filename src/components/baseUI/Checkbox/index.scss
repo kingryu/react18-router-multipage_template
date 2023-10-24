@@ -1,0 +1,19 @@
+@use 'src/theme';
+
+.checkbox-container{
+  display: inline-block;
+  cursor: pointer;
+  .checked{
+    fill: theme.$primary;
+  }
+  .not-checked{
+    fill:#666;
+  }
+  .checkbox{
+    vertical-align: bottom;
+    padding: 0 8px 0 0;
+  }
+  &:hover .checkbox{
+    color:theme.$primary-dark;
+  }
+}

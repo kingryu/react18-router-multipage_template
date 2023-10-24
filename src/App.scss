@@ -1,0 +1,268 @@
+@use "sass:color";
+@use "theme";
+
+a,
+aside,
+blockquote,
+caption,
+div,
+em,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+img,
+label,
+li,
+menu,
+nav,
+p,
+pre,
+section,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+ul {
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a,
+div,
+i,
+span {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+*::selection {
+  background: color.change(theme.$primary, $alpha: 0.1);
+}
+
+*:focus {
+  outline: none;
+}
+
+.fly-animate-float {
+  position: relative;
+  animation-name: float-pop;
+  animation-iteration-count: 2;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes float-pop {
+  0% {
+    top: 0px;
+  }
+
+  25% {
+    top: -1px;
+  }
+
+  50% {
+    top: -5px;
+  }
+
+  75% {
+    top: -1px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+.fly-animate-jump {
+  transform-origin: center center;
+  animation: jump 0.7s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes jump {
+  0% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(0);
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    transform: rotate(8deg) translateY(5px);
+  }
+
+  50% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(-2px);
+  }
+
+  75% {
+    animation-timing-function: ease-out;
+    transform: rotate(-8deg) translateY(5px);
+  }
+
+  100% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+.fly-slow-jump {
+  transform-origin: center center;
+  animation: jump2 4s linear infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes jump2 {
+  0% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(0);
+  }
+
+  5% {
+    animation-timing-function: ease-out;
+    transform: rotate(5deg) translateY(3px);
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(-2px);
+  }
+
+  15% {
+    animation-timing-function: ease-out;
+    transform: rotate(-5deg) translateY(3px);
+  }
+
+  20% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(0);
+  }
+
+  100% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+@keyframes blink {
+  40% {
+      opacity: 1;
+  }
+  50% {
+      opacity: .5;
+  }
+  60% {
+      opacity: 1;
+  }
+}
+
+
+.fly-animate-blink {
+  animation: blink 2s;
+  animation-iteration-count: infinite;
+}
+
+.fly-animate-breath {
+  animation-name: breath;
+  animation-duration: 3.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.fly-animate-twinkle {
+  position: relative;
+  &:after,
+  &:before {
+    width: 60 * 1px;
+    height: 60 * 1px;
+    content: '';
+    box-sizing: border-box;
+    border: 4 * 1px solid rgba(255, 255, 255, 0.6);
+    position: absolute;
+    border-radius: calc(60 / 2) * 1px;
+    right: 50%;
+    margin-top: calc(-30 / 2) * 1px;
+    margin-right: calc(-60 / 2) * 1px;
+    z-index: 1;
+    transform: scale(0);
+    animation: twinkle 2s ease-out infinite;
+  }
+
+  &::after {
+    animation-delay: 0.4s;
+  }
+}
+@keyframes twinkle {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+

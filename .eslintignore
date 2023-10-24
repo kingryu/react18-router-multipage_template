@@ -1,0 +1,5 @@
+{
+    "ignorePatterns": ["spine-webgl.js"],
+    "rules": {
+    }
+}

@@ -1,0 +1,51 @@
+.tabbar-container{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background-size: 100% 100%;
+  height:22.667vw;
+  display: flex;
+  align-items:flex-end;
+  .tab-item{
+    width:19.66%;
+    height:60%;
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    color: rgb(176, 188, 197);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-bottom: 2%;
+    user-select: none;
+    &:first-child{
+      width:20.51%;
+    }
+    &:last-child {
+      width:20.51%;
+    }
+  }
+  .act{
+    background-size: 100% ; 
+    background-repeat: no-repeat;
+    color:#fff;
+    font-weight: bold;
+  }
+  .center{
+    margin-bottom: 9%;
+  }
+  .icon{
+    width:100%;
+    height:100%;
+    margin-top: 6px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 8vw;
+  }
+}
+.tab-bottom{
+  height:100%;
+  height:12vw;
+}

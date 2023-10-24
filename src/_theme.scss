@@ -1,0 +1,14 @@
+$primary: #30cef0 !default;
+$secondary: #73a6e8;
+$title:#fff;
+$text:#fff;
+$bg:#201F24;
+
+$bold-font:"PingFangSC-Medium";
+$regular-font:"PingFangSC-Regular";
+
+$cdn:'//xxx.examplecdn.com';
+
+@function getSrc($img) {
+  @return url($cdn + $img);
+}

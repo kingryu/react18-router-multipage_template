@@ -1,0 +1,61 @@
+.xp-drawer-top {
+  top: 0;
+  transform: translate(-50.1%,0);
+  animation: topfadeIn .3s;
+}
+
+.xp-drawer-right {
+  top: 50%;
+  right: 0;
+  transform: translate(0,-50%);
+  animation: rightfadeIn .3s;
+}
+
+.xp-drawer-left {
+  top: 50%;
+  left: 0;
+  transform: translate(0,-50%);
+  animation: leftfadeIn .3s;
+}
+
+.xp-drawer-bottom {
+  top: 100%;
+  transform: translate(-50.1%,-100%);
+  animation: bottomfadeIn .3s;
+}
+
+@keyframes topfadeIn {
+  0% {
+    transform: translate(-50.1%, -100%);
+  }
+  100% {
+    transform: translate(-50.1%, 0);
+  }
+}
+
+@keyframes rightfadeIn {
+  0% {
+    transform: translate(100%, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes leftfadeIn {
+  0% {
+    transform: translate(-100%, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes bottomfadeIn {
+  0% {
+    transform: translate(-50.1%, 0);
+  }
+  100% {
+    transform: translate(-50.1%, -100%);
+  }
+}

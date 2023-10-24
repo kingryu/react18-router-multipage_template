@@ -1,0 +1,47 @@
+.xp-dialog-content {
+  width: 370px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  -webkit-animation: fadeInDown .3s;
+  animation: fadeInDown .3s;
+
+}
+.xp-dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 0.88em;
+  line-height: 1;
+  color: #000;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 0px;
+  background: url(./icon.svg);
+  width: 14px;
+  height: 14px;
+  z-index: 1;
+}
+
+@keyframes fadeInDown {
+  0% {
+      transform: translate(-50%, -50%) scale(0.2);
+      opacity: 0;
+  }
+  100% {
+    transform: translate(-50%,-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+      -webkit-transform: translate(-50%, -50%) scale(0.2);
+      opacity: 0;
+  }
+  100% {
+      -webkit-transform: translate(-50%,-50%) scale(1);
+      opacity: 1;
+  }
+}

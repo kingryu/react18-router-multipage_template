@@ -1,0 +1,27 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #385c91;
+}
+
+html,
+body,
+#container,
+input,
+input::placeholder {
+  font-family: "PingFang SC", "Microsoft YaHei", "PingFangSC-Regular", "Helvetica Neue", "Helvetica", "Hiragino Sans GB",
+    "SimHei", "Arial", "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.x-bold {
+  font-family: "PingFangSC-Medium";
+}
+
+.x-normal {
+  font-family: "PingFangSC-Regular";
+}
+

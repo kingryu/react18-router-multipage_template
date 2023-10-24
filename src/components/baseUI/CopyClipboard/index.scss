@@ -1,0 +1,10 @@
+.copy-btn{
+  cursor: pointer;
+  position: relative;
+  .copytext{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
