@@ -1,6 +1,4 @@
 const childProcess = require('child_process');
-const {execSync} = require('child_process')
-
 
 function runScript(scriptPath, callback) {
 
@@ -26,9 +24,8 @@ function runScript(scriptPath, callback) {
 
 }
 console.log('now building')
-execSync("npm run build", {stdio: 'inherit'})
 
- let scriptProcess = ['./scripts/delNodeOldRes.js', './scripts/copy2node.js', './scripts/push2node.js']
+ let scriptProcess = ['./scripts/build.js','./scripts/delNodeOldRes.js', './scripts/copy2node.js', './scripts/push2node.js']
  let currentPoint = -1;
 
 const runNext = () => {
