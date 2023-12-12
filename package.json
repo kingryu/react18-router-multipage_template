@@ -24,6 +24,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "makepack": "node ./publish/script/makepack.js",
+    "showmd5": "node ./publish/script/showMD5.js",
+    "delzip": "node ./publish/script/delOldZip.js",
+    "zip": "npm run build&&npm run delzip&&npm run makepack&&npm run showmd5",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .gitignore ."
