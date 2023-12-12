@@ -1,10 +1,9 @@
-import ReactDOM from "react-dom/client";
 import React, { useEffect } from 'react';
 import Modal from '../Modal';
 import './index.scss';
 
 /*
-使用方法1：
+使用方法：
   const [toast, setToast] = useState('');
 
   const showToast = () => {
@@ -16,9 +15,6 @@ import './index.scss';
   };
 
   <Toast visible={toast} content={toast} onClose={toastClose}></Toast>
-
-使用方法2：
- Toast.show({content:"test", timeOut:2200})
 */
 
 interface Props {
@@ -30,9 +26,7 @@ interface Props {
   onClose?: Function; //关闭事件
 }
 
-const Toast: React.FC<Props> & {
-  Show: typeof Show;
-} = ({
+const Toast: React.FC<Props> = ({
   visible,
   toastClass,
   timeOut = 2235,
@@ -71,25 +65,4 @@ const Toast: React.FC<Props> & {
   );
 };
 
-
-export const Show = (props:Props) => {
-  let divDom = document.createElement("div");
-  document.body.appendChild(divDom);
-  const { onClose, visible, ...other } = props;
-  const closeHandler = (...res:any[]) => {
-    onClose && onClose(res);
-    document.body.removeChild(divDom);
-    toast.unmount();
-  };
-  const toast = ReactDOM.createRoot(divDom);
-  toast.render(
-    <Toast
-      visible={true}
-      {...other}
-      onClose={closeHandler}
-    ></Toast>
-  );
-};
-
-Toast.Show = Show;
 export default Toast;
